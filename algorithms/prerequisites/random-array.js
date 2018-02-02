@@ -6,7 +6,7 @@
 //   while(indicator == false){
 //     var num = Math.floor(Math.random() * 101);
 //     console.log(num);
-//     if(arr.includes(num) === false){
+//     if(arr.includes(num) ===1 false){
 //       break;
 //     }
 //   }
