@@ -1,22 +1,37 @@
-// Assignment: Random Array
-// Create an array X and fill the array with 10 values, each value being a random integer between 0 to 100.  For example when your program is done, X could be something like this: [35, 15, 3, 39, 53, 93, 25, 39, 59, 21]
+// var arr = [];
+// for(var i = 0; i < 10; i++){
+//   var indicator = false;
+//   // var num = Math.floor(Math.random() * 101);
+//   console.log(num);
+//   while(indicator == false){
+//     var num = Math.floor(Math.random() * 101);
+//     console.log(num);
+//     if(arr.includes(num) === false){
+//       break;
+//     }
+//   }
+//   arr.push(num);
+      
+// }
 
-var arr = [];
-function randomArray(arr){
-  for(var i = 0; i < 11; i++){
-    var num = Math.floor(Math.random() * 100);
-    for(var z in arr){
-      if(arr[z] === num){
-        //redo select random number
-        break;
-      }
-    }
-    if(z === arr.length){
-      arr[i] = num;
-    }
+// while(arr.length < 10){
+//   var num = Math.floor(Math.random() * 100);
+//   if(arr.includes(num) === false){
+//     arr.push(num);
+//   }
+// }
 
+const set1 = new Set([]);
+while (set1.size < 10){
+  var num = Math.floor(Math.random() * 100);
+  if(set1.has(num) === false){
+    set1.add(num);
   }
-  return arr;
+}
+const set2 = set1[Symbol.iterator]();
+var arr = [];
+for (var i = 0; i < 10; i++){
+  arr.push(set2.next().value);
 }
 
-randomArray(arr);
+console.log(arr);
