@@ -13,19 +13,28 @@
 // [1, 3, 5, 0, 7]
 // [1, 3, 0, 5, 7]
 
-var arr = [1, 3, 5, 7, 9, 11];
+// var arr = [1, 3, 5, 7, 9, 11];
+// function insertXinY(arr, y, x){
+//   arr.push(0);
+//   // length changed 4 -> 5
+//   // [1, 3, 5, 7, 0]
+//   var temp = x;
+//   for(var i = 0; i < (arr.length - 1) - y; i++){
+//     temp = arr[arr.length - (i + 2)];
+//     arr[arr.length - (i + 2)] = x;
+//     arr[arr.length - (i + 1)] = temp;
+//     console.log('counter');
+//   }
+//   return arr; 
+// }
+
+var arr = [1, 3, 5, 7];
 function insertXinY(arr, y, x){
   arr.push(0);
-  // length changed 4 -> 5
-  // [1, 3, 5, 7, 0]
-  var temp = x;
-  for(var i = 0; i < (arr.length -1) - y; i++){
-    temp = arr[arr.length - (i + 2)];
-    arr[arr.length - (i + 2)] = x;
-    arr[arr.length - (i + 1)] = temp;
-    console.log('counter');
+  for(var i = arr.length - 1; i > y; i--){
+    arr[i] = arr[i - 1];
   }
-  return arr; 
+  arr[y] = x;
+  return arr;
 }
-
 insertXinY(arr, 2, 0);
