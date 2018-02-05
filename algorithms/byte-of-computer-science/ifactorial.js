@@ -9,6 +9,7 @@
 
 function iFactorial(num){
   var answer = 1;
+
   for(var i = 1; i <= num; i++){
     answer *= i;
   }
@@ -16,3 +17,4 @@ function iFactorial(num){
 }
 
 iFactorial(4);
+console.log(iFactorial(4));
