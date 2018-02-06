@@ -9,7 +9,7 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
-      "program": "${workspaceFolder}/rFibonacci.js"
+      "program": "${workspaceFolder}/iBS.js"
 
     }
   ]
