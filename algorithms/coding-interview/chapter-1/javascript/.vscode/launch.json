@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/check-permutation.js"
+            "program": "${workspaceFolder}/urlify.js"
         }
     ]
 }
